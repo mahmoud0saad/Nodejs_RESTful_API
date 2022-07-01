@@ -12,7 +12,11 @@ const data = [
 
 const ds={
     fetchProducts : async ()=>{
+        console.log("hello from fetch products ")
+
        const connection =(await clientConnection())
+
+        console.log("hello from fetch productsconnection  "+connection)
 
       const products= await connection.collection.find({},{projection:{shops:0}}).toArray()
  
